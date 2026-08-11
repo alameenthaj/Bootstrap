@@ -1,202 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <style>
-     <style>
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-.main-content {
-    height: calc(100vh - 150px);
-}
-
-.main-content .row {
-    height: 100%;
-}
-
-.sidebar {
-    height: 100%;
-    overflow-y: auto;
-}
-
-.right-content {
-    height: 100%;
-    overflow-y: auto;
-}
-
-</style>
-    </style>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Travel Promotions</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body>
 
+<div class="container my-5">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ml-5 py-5">
-        <a class="navbar-brand" href="#" style="font-weight: bold;color:orangered">mashupstack</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <!-- Carousel -->
+    <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/id/1018/1200/500" class="d-block w-100" alt="Beach">
+                <div class="carousel-caption">
+                    <h3>Escape to Sunny Beaches</h3>
+                    <p>Enjoy amazing summer vacation deals.</p>
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/1015/1200/500" class="d-block w-100" alt="Mountains">
+                <div class="carousel-caption">
+                    <h3>Explore Mountain Adventures</h3>
+                    <p>Experience nature like never before.</p>
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/1043/1200/500" class="d-block w-100" alt="City">
+                <div class="carousel-caption">
+                    <h3>Discover Beautiful Cities</h3>
+                    <p>Special discounts on city tours.</p>
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#travelCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Evaluation <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item  ml-3 mr-3">
-                    <a class="nav-link" href="#">Placements</a>
-                </li>
+        <button class="carousel-control-next" type="button" data-bs-target="#travelCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
 
-                <li class="nav-item dropdown mr-3">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="false">
-                        Interview
-                    </a>
-                    <div class="dropdown-menu ">
-                        <a class="dropdown-item" href="#">View Resume</a>
-                        <a class="dropdown-item" href="#">Tech Interview</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">HR Interview</a>
-                    </div>
-                </li>
-
-
-                <li class="nav-item dropdown mr-3">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="false">
-                        Learn
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-
-            </ul>
-
-        </div>
-    </nav>
-
-    <div class="container-fluid main-content">
-        <div class="row">
-            <div class="col-md-3 bg-light p-4 sidebar">
-                <h4 class="mb-4">Bootstrap Topics</h4>
-
-                <div class="list-group">
-
-                    <a href="#" class="list-group-item list-group-item-action active">
-                        Introduction
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Containers
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Grids
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Typography
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action">
-                        colors
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Tables
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Images
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Alerts
-                    </a>
-                     <a href="#" class="list-group-item list-group-item-action">
-                        Buttons
-                    </a>
-                     <a href="#" class="list-group-item list-group-item-action">
-                        BreadCrumb
-                    </a>
-                     <a href="#" class="list-group-item list-group-item-action">
-                        Badges
-                    </a>
-                     <a href="#" class="list-group-item list-group-item-action">
-                        Progress Bar
-                    </a>
-                     <a href="#" class="list-group-item list-group-item-action">
-                        pagination
-                    </a>
-                     <a href="#" class="list-group-item list-group-item-action">
-                        Cards
-                    </a>
-                     <a href="#" class="list-group-item list-group-item-action">
-                        Forms
-                    </a>
-                </div>
-        </div>
-
-        <!-- right content -->
-
-        <div class="col-md-9 p-4 right-content">
-            <h2 class="mb-4">Bootstrap Overview</h2>
-            <p>
-                Bootstrap is a popular front-end framework that allows developers to create responsive and mobile-first
-                websites quickly and easily. It provides a collection of CSS and JavaScript components that can be used
-                to build modern web interfaces.
-
-
-
-                 Bootstrap is a popular front-end framework that allows developers to create responsive and mobile-first
-                websites quickly and easily. It provides a collection of CSS and JavaScript components that can be used
-                to build modern web interfaces.
-
-                 Bootstrap is a popular front-end framework that allows developers to create responsive and mobile-first
-                websites quickly and easily. It provides a collection of CSS and JavaScript components that can be used
-                to build modern web interfaces.
-
-
-                 Bootstrap is a popular front-end framework that allows developers to create responsive and mobile-first
-                websites quickly and easily. It provides a collection of CSS and JavaScript components that can be used
-                to build modern web interfaces.
-
-                 Bootstrap is a popular front-end framework that allows developers to create responsive and mobile-first
-                websites quickly and easily. It provides a collection of CSS and JavaScript components that can be used
-                to build modern web interfaces.
-            </p>
-
-            <h3 class="mt-4">Key Features of Bootstrap:</h3>
-            <ul>
-                <li>Responsive Grid System</li>
-                <li>Pre-designed Components</li>
-                <li>Customizable Themes</li>
-                <li>Cross-browser Compatibility</li>
-                <li>JavaScript Plugins</li>
-            </ul>
-
-            <p class="mt-4">
-                With Bootstrap, developers can save time and effort by utilizing its ready-made components and
-                responsive design capabilities. It is widely used in web development projects to create visually
-                appealing and user-friendly websites.
-            </p>
-        </div>
     </div>
 
-</body>
+</div>
 
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Travel Offer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <p>
+                    Book your dream vacation today and enjoy exclusive travel
+                    packages, hotel discounts, and guided tours.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
