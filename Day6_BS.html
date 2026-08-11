@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .feedback-form {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .satisfaction label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        .satisfaction input {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="feedback-form">
+
+        <h2>Feedback Form</h2>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" name="feedback"
+                placeholder="Write your feedback here..." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="source">How did you find our site?</label>
+
+            <select id="source" name="source">
+                <option value="">Select an option</option>
+                <option value="google">Google Search</option>
+                <option value="social-media">Social Media</option>
+                <option value="friend">Friend or Family</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group satisfaction">
+            <label>Satisfaction Level</label>
+
+            <input type="radio" id="one" name="satisfaction" value="1">
+            <label for="one">1</label>
+
+            <input type="radio" id="two" name="satisfaction" value="2">
+            <label for="two">2</label>
+
+            <input type="radio" id="three" name="satisfaction" value="3">
+            <label for="three">3</label>
+
+            <input type="radio" id="four" name="satisfaction" value="4">
+            <label for="four">4</label>
+
+            <input type="radio" id="five" name="satisfaction" value="5">
+            <label for="five">5</label>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+</body>
+</html>
