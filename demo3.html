@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Website</title>
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<!-- Travel Banner -->
+<div id="travelCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#travelCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#travelCarousel" data-slide-to="1"></li>
+        <li data-target="#travelCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Images -->
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                 class="d-block w-100"
+                 style="height: 500px; object-fit: cover;">
+
+            <div class="carousel-caption">
+                <h2>Explore the Mountains</h2>
+                <p>Experience the beauty of nature and peaceful mountains.</p>
+
+                <button type="button"
+                        class="btn btn-primary btn-lg"
+                        data-toggle="modal"
+                        data-target="#bookingModal">
+                    Book Now
+                </button>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                 class="d-block w-100"
+                 style="height: 500px; object-fit: cover;">
+
+            <div class="carousel-caption">
+                <h2>Relax at the Beach</h2>
+                <p>Enjoy beautiful beaches, sunshine and unforgettable moments.</p>
+
+                <button type="button"
+                        class="btn btn-primary btn-lg"
+                        data-toggle="modal"
+                        data-target="#bookingModal">
+                    Book Now
+                </button>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0"
+                 class="d-block w-100"
+                 style="height: 500px; object-fit: cover;">
+
+            <div class="carousel-caption">
+                <h2>Discover New Places</h2>
+                <p>Travel the world and discover amazing destinations.</p>
+
+                <button type="button"
+                        class="btn btn-primary btn-lg"
+                        data-toggle="modal"
+                        data-target="#bookingModal">
+                    Book Now
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Previous -->
+    <a class="carousel-control-prev"
+       href="#travelCarousel"
+       role="button"
+       data-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <!-- Next -->
+    <a class="carousel-control-next"
+       href="#travelCarousel"
+       role="button"
+       data-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+</div>
+
+
+<!-- Booking Popup / Modal -->
+<div class="modal fade" id="bookingModal">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Booking Details</h4>
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+                <h5>Travel Package</h5>
+
+                <p>
+                    Book your dream vacation with our special travel package.
+                </p>
+
+                <hr>
+
+                <p><strong>Package:</strong> 5 Days / 4 Nights</p>
+                <p><strong>Includes:</strong> Hotel, Breakfast and Transportation</p>
+                <p><strong>Price:</strong> ₹25,000 per person</p>
+
+                <button class="btn btn-success">
+                    Confirm Booking
+                </button>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Info Icon -->
+<div class="text-center mt-3 mb-3">
+
+    <span class="badge badge-info"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Choose your destination and click Book Now to view booking details.">
+        &#9432;
+    </span>
+
+</div>
+
+
+<!-- Bootstrap 4 JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+</body>
+</html>
